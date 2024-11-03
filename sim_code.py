@@ -114,8 +114,8 @@ def mutInBrStemCells(num_stem, stemCells, t, mu_0, Genom, st_d):
     return tCells
 
 # Branching
-# bias_d = 0.5 ->UNBIASED
-# bias_d = 10 -> BIASED
+# bias_d = 0.5 ->BIASED
+# bias_d = 10 -> UNBIASED
 
 #for small sigma
 def WNdist_f(x_value, mu_value, sig_value, n_value): # x, mean, var,
