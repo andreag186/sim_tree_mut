@@ -297,7 +297,7 @@ from scipy.stats import qmc
 
 def latin_hypercube_sampling(num_samples):
     # Define the parameter levels
-    mu_0 = [6,60]
+    mu_0 = [4,6,8,40,60,80]
     GenSize = [500000000]  
     StD = [0, 5]  # Elongation param-> Stochastic = num_stem, Structured = 0
     biasVar = [0.5, 10]  # Branching param -> Unbiased= 0.5, Biased = 10
