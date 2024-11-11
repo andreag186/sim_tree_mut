@@ -35,8 +35,8 @@ import gc
 
 
 # Elongation
-# if st_d = num_stem --> Structured Elongation
-# if st_d = 0 --> Stochastic Elongation
+# if st_d = num_stem --> Stochastic Elongation (AlL CELLS EXPERIENCE 'RANDOMNESS')
+# if st_d = 0 --> Structured Elongation (NO CELLS EXPERIENCE RANDOMNESS, LINEAGE PRESERVED)
 
 def mutInStemCells(num_stem, t, mu_0, Genom, st_d): #Num_of_stemcells, Num_of_division_in_elongation, mutation_rate, Genom_size, Num_of_stemcells - gamma
 
@@ -114,8 +114,8 @@ def mutInBrStemCells(num_stem, stemCells, t, mu_0, Genom, st_d):
     return tCells
 
 # Branching
-# bias_d = 0.5 ->BIASED
-# bias_d = 10 -> UNBIASED
+# bias_d = 0.5 ->BIASED SAMPLING
+# bias_d = 10 -> UNBIASED SAMPLING
 
 #for small sigma
 def WNdist_f(x_value, mu_value, sig_value, n_value): # x, mean, var,
