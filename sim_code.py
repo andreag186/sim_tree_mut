@@ -939,13 +939,13 @@ def calc_variants(genetic_matrix, physical_matrix, tree_dict, GenSize):
 # which model
 def determine_model(StD, biasVar):
     if StD == NumStem and biasVar == 0.5:
-        return "Model #1"
-    elif StD == NumStem and biasVar == 10:
-        return "Model #2"
-    elif StD == 0 and biasVar == 0.5:
-        return "Model #3"
-    elif StD == 0 and biasVar == 10:
         return "Model #4"
+    elif StD == NumStem and biasVar == 10:
+        return "Model #3"
+    elif StD == 0 and biasVar == 0.5:
+        return "Model #2"
+    elif StD == 0 and biasVar == 10:
+        return "Model #1"
     return "Unknown"
 
 
