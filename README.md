@@ -1,2 +1,13 @@
 # sim_tree_mut
 # **Estimating the Somatic Mutation Rate in Long-Lived Trees: Phylogenomic Approaches and ABC Alternatives**
+
+
+## **Abstract**
+Long-lived trees accumulate persistent mutations along their branches, contributing to intra-individual genetic heterogeneity. In this thesis, I evaluate the phylogenomic method Orr et al. (2020) developed, which links genetic variation to tree topology to estimate mutation rates. However, this method assumes mutations follow the tree's branching structure, an assumption that may not always hold. Using simulations based on Tomimoto and Satake's (2023) models of somatic mutation accumulation across long-lived trees, the method is assessed across various tree topologies, mutation rates and meristem dynamics. 
+
+Trees with balanced short-terminal and unbalanced long-terminal topologies performed best under low mutation rates (<10-9 per site per year). These topologies minimize mutation overlap, enhancing the distinctiveness of genetic signals. In contrast, balanced long-terminal topologies underpredicted mutation rates due to diluted mutation signals, while unbalanced short-terminal topologies overpredicted rates due to uneven mutation distributions. Additionally, I observed a substantial increase in the mean number of shared mutations as mutation rates rose, with the coefficient of variation remaining nearly constant. This result suggests that at high mutation rates, branches share mutations more evenly, reducing phylogenetic distinctiveness. The convergence of shared mutations was particularly pronounced in topologies with long shared internal nodes relative to terminal branches, which further diminishes the effectiveness of the phylogenomic method in resolving tree topologies.
+
+Given these findings, I recommend using the phylogenomic method for low mutation rates and topologies with minimal shared mutations.
+
+To address the limitations of the phylogenomic method, I present a prototype approach based on Approximate Bayesian Computation (ABC), which does not rely on topological assumptions. The ABC simulation framework approximates the highest posterior density (HPD) for somatic mutation rates and meristem parameters of a given tree. The simulated validation results showed that 99.4% of all true parameter values were successfully captured within the 95% HPD interval. This prototype offers significant potential as a flexible, scalable alternative for estimating somatic mutation rates, particularly in complex tree topologies. My findings suggest that while the phylogenomic method can be effective under certain conditions, the ABC approach provides a promising new direction for future research in tree mutation dynamics.
+
